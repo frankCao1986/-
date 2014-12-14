@@ -17,20 +17,8 @@
 @end
 @implementation MyCartTableViewCell
 
-- (void)awakeFromNib {
-   
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
-
 - (void)layoutSubviews{
     [super layoutSubviews];
-    
     [self.itemImageView sd_setImageWithURL:self.cloth.img];
     [self.itemImageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.itemTitleLabel setText:self.clothDetail.title];

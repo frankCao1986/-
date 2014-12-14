@@ -10,6 +10,7 @@
 #import "MyCartTableViewCell.h"
 #import "ClothDataModel.h"
 #import "ClothDetailDataModel.h"
+
 @interface MyCartTableViewController : UITableViewController
 @property (nonatomic,strong) ClothDataModel *cloth;
 @property (nonatomic,strong) ClothDetailDataModel *clothDetail;

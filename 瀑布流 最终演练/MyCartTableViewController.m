@@ -38,18 +38,13 @@
         [self.detailDataList removeAllObjects];
     }
     
-    
     NSString *str = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     NSString *path = [str stringByAppendingPathComponent:@"cart.plist"];
-    
+
     NSDictionary *allDict = [NSDictionary dictionaryWithContentsOfFile:path];
     
     
     for (NSDictionary *dict in allDict) {
-        ////        NSData *data =
-        
-
-        //        NSLog(@"%@",cloth.price);
         ClothDataModel *cloth = [NSKeyedUnarchiver unarchiveObjectWithData:allDict[dict][@"cloth"]];
         ClothDetailDataModel *detail = [NSKeyedUnarchiver unarchiveObjectWithData:allDict[dict][@"detail"]];
         [self.dataList addObject:cloth];

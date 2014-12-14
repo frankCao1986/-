@@ -45,6 +45,14 @@
     else{
         [self.cellsOnScreenDictM removeAllObjects];
     }
+    
+    for (UIView *view in self.subviews) {
+        
+        if ([view isKindOfClass:[WaterFlowCell class]]) {
+              [view removeFromSuperview];
+        }
+      
+    }
 }
 - (void)reloadData{
     [self generateCacheData];
@@ -110,6 +118,7 @@
             }
         }
     }
+    NSLog(@"%d",self.subviews.count);
 }
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier{
     // 从缓存池中实例化一个可以重用单元格

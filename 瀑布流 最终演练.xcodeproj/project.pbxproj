@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		010D7A121A3B3E8F00FD64F7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */; };
 		010D7A161A3B459100FD64F7 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D7A151A3B459100FD64F7 /* LoadingView.m */; };
+		014527D71A3D33F50099FCE7 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014527D61A3D33F50099FCE7 /* Launch Screen.xib */; };
 		01975FF01A3A8F9800E8C005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01975FEF1A3A8F9800E8C005 /* main.m */; };
 		01975FF31A3A8F9800E8C005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01975FF21A3A8F9800E8C005 /* AppDelegate.m */; };
 		01975FFB1A3A8F9800E8C005 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01975FFA1A3A8F9800E8C005 /* Images.xcassets */; };
@@ -57,6 +58,7 @@
 		010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		010D7A141A3B459100FD64F7 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
 		010D7A151A3B459100FD64F7 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		014527D61A3D33F50099FCE7 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		01975FEA1A3A8F9800E8C005 /* 瀑布流 最终演练.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "瀑布流 最终演练.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01975FEE1A3A8F9800E8C005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01975FEF1A3A8F9800E8C005 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		01975FE11A3A8F9800E8C005 = {
 			isa = PBXGroup;
 			children = (
+				014527D61A3D33F50099FCE7 /* Launch Screen.xib */,
 				01975FEC1A3A8F9800E8C005 /* 瀑布流 最终演练 */,
 				019760061A3A8F9800E8C005 /* 瀑布流 最终演练Tests */,
 				01975FEB1A3A8F9800E8C005 /* Products */,
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01975FFB1A3A8F9800E8C005 /* Images.xcassets in Resources */,
+				014527D71A3D33F50099FCE7 /* Launch Screen.xib in Resources */,
 				0197608A1A3AF44100E8C005 /* Storyboard.storyboard in Resources */,
 				01B118241A3C0E10000F9A2B /* myURL.plist in Resources */,
 			);
