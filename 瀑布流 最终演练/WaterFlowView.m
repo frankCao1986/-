@@ -103,8 +103,9 @@
         WaterFlowCell *cell = self.cellsOnScreenDictM[indexPath];
         if (cell == nil) {
             CGRect frame = [self.cellFrameArrayM[indexPath.row] CGRectValue];
-            cell = [self.dataSource waterFlowView:self cellForRowAtIndexPath:indexPath];
+    
             if ([self isInScreenWithFrame:frame]) {
+                cell = [self.dataSource waterFlowView:self cellForRowAtIndexPath:indexPath];
                 [cell setFrame:frame];
                 [self.cellsOnScreenDictM setObject:cell forKey:indexPath];
                 [self addSubview:cell];
@@ -118,7 +119,7 @@
             }
         }
     }
-    NSLog(@"%d",self.subviews.count);
+
 }
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier{
     // 从缓存池中实例化一个可以重用单元格

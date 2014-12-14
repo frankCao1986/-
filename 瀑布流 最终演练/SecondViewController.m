@@ -57,10 +57,6 @@
 }
 - (void)loadData{
     NSString *str = @"http://www.mogujie.com/app_mgj_v511_book/clothing?_adid=5503509D-800B-45EF-B767-F6586FFF165E&_did=0f607264fc6318a92b9e13c65db7cd3c&_atype=iPhone&_source=NIMAppStore511&_fs=NIMAppStore511&_swidth=640&_network=2&_mgj=%@&title=最热&from=hot_element&login=false&fcid=6550&q=最热&track_id=1377824666&homeType=shopping";
-    
-    
-    /*
-     */
     NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSData *data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url] returningResponse:nil error:nil];

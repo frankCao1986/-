@@ -13,6 +13,8 @@
 #import "ProductViewController.h"
 #import "ClothDetailDataModel.h"
 #import "MyCartTableViewController.h"
+#import "SDImageCache.h"
+#import "UIImage+WebP.h"
 @interface MainViewController ()
 @property (nonatomic,strong) NSMutableArray *dataList;
 @property (nonatomic,weak) LoadingView *loadingView;
@@ -30,7 +32,7 @@
     [self setupNavigationBar];
     [self setupTabBar];
     [self setupRefreshControl];
-    [self refreshControl];
+
     
 }
 #pragma mark - 当前视图navigation bar and tab bar 视图设置
@@ -46,25 +48,25 @@
 {
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing data..."];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        [NSThread sleepForTimeInterval:3];
-        
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
+//        [NSThread sleepForTimeInterval:3];
+    
         dispatch_async(dispatch_get_main_queue(), ^{
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"MMM d, h:mm a"];
             NSString *lastUpdate = [NSString stringWithFormat:@"Last updated on %@", [formatter stringFromDate:[NSDate date]]];
             
             refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:lastUpdate];
-            
+            [self loadData];
+
             [refreshControl endRefreshing];
     
         });
-    });
+//    });
 
     
-    [self loadData];
-
+    
 }
 
 #pragma mark 设置 navigation bar
@@ -96,7 +98,7 @@
 }
 #pragma mark 点击navigation bar 右上按钮事件
 - (void)viewMyCartClicked{
-    NSLog(@"Hello");
+
 //    myCartController
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     MyCartTableViewController *myController = [storyBoard instantiateViewControllerWithIdentifier:@"myCartController"];
@@ -116,6 +118,9 @@
     if (index >= self.urlList.count) {
         return;
     }
+//    for (NSInteger i = 0; i < self.urlList.count; i++) {
+    
+
     NSString *str = self.urlList[index];
     index++;
     NSURL *url = [NSURL URLWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -141,11 +146,10 @@
         clothDetail.gid = detailDict[@"gid"];
         clothDetail.cfav = [dict[@"cfav"] integerValue];
         clothDetail.creply = [dict[@"creply"] integerValue];
-
         [self.dataList addObject:cloth];
         [self.dataDetailList addObject:clothDetail];
     }
-    
+//        }
     [self.waterFlowView reloadData];
 }
 #pragma mark - water flow view 数据源方法
@@ -159,11 +163,16 @@
 }
 #pragma mark 实例化单元格
 - (WaterFlowCell *)waterFlowView:(WaterFlowView *)waterFlowView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static int count = 0;
     WaterFlowCell *cell = [waterFlowView dequeueReusableCellWithIdentifier:@"ID"];
     if (cell == nil) {
         cell = [[WaterFlowCell alloc]initWithReuseIdentifier:@"ID"];
+        count++;
+        NSLog(@"%d",count);
     }
+
     ClothDataModel *cloth = self.dataList[indexPath.row];
+    
     [cell.imageView sd_setImageWithURL:cloth.img];
     [cell.textLabel setText:cloth.price];
     
