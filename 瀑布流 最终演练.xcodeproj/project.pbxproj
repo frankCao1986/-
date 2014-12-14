@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		010D7A121A3B3E8F00FD64F7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */; };
-		010D7A161A3B459100FD64F7 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D7A151A3B459100FD64F7 /* LoadingView.m */; };
 		014527D71A3D33F50099FCE7 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 014527D61A3D33F50099FCE7 /* Launch Screen.xib */; };
 		01975FF01A3A8F9800E8C005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01975FEF1A3A8F9800E8C005 /* main.m */; };
 		01975FF31A3A8F9800E8C005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01975FF21A3A8F9800E8C005 /* AppDelegate.m */; };
@@ -56,9 +55,7 @@
 /* Begin PBXFileReference section */
 		010D7A101A3B3E8F00FD64F7 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		010D7A141A3B459100FD64F7 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
-		010D7A151A3B459100FD64F7 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
-		014527D61A3D33F50099FCE7 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		014527D61A3D33F50099FCE7 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		01975FEA1A3A8F9800E8C005 /* 瀑布流 最终演练.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "瀑布流 最终演练.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01975FEE1A3A8F9800E8C005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01975FEF1A3A8F9800E8C005 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,10 +138,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01975FE11A3A8F9800E8C005 = {
+		0150A78A1A3D854800870FFF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				019760131A3A8FDE00E8C005 /* MainViewController.h */,
+				019760141A3A8FDE00E8C005 /* MainViewController.m */,
+				010D7A101A3B3E8F00FD64F7 /* SecondViewController.h */,
+				010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */,
+				01B118261A3C3E92000F9A2B /* ProductViewController.h */,
+				01B118271A3C3E92000F9A2B /* ProductViewController.m */,
+				01B1182F1A3C7AA0000F9A2B /* MyCartTableViewController.h */,
+				01B118301A3C7AA0000F9A2B /* MyCartTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0150A78B1A3D857300870FFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01B118321A3C806D000F9A2B /* MyCartTableViewCell.h */,
+				01B118331A3C806D000F9A2B /* MyCartTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0150A78C1A3D857E00870FFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				019760161A3A907400E8C005 /* ClothDataModel.h */,
+				019760171A3A907400E8C005 /* ClothDataModel.m */,
+				01B1182B1A3C5BF4000F9A2B /* ClothDetailDataModel.h */,
+				01B1182C1A3C5BF4000F9A2B /* ClothDetailDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0150A78D1A3D858600870FFF /* Others */ = {
 			isa = PBXGroup;
 			children = (
 				014527D61A3D33F50099FCE7 /* Launch Screen.xib */,
+				01975FF11A3A8F9800E8C005 /* AppDelegate.h */,
+				01975FF21A3A8F9800E8C005 /* AppDelegate.m */,
+				019760891A3AF44100E8C005 /* Storyboard.storyboard */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		0150A78E1A3D858B00870FFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0197604B1A3A92F500E8C005 /* lib */,
+				0150A78D1A3D858600870FFF /* Others */,
+				0150A78C1A3D857E00870FFF /* Model */,
+				0150A78B1A3D857300870FFF /* View */,
+				0150A78A1A3D854800870FFF /* Controller */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		01975FE11A3A8F9800E8C005 = {
+			isa = PBXGroup;
+			children = (
 				01975FEC1A3A8F9800E8C005 /* 瀑布流 最终演练 */,
 				019760061A3A8F9800E8C005 /* 瀑布流 最终演练Tests */,
 				01975FEB1A3A8F9800E8C005 /* Products */,
@@ -163,28 +217,8 @@
 		01975FEC1A3A8F9800E8C005 /* 瀑布流 最终演练 */ = {
 			isa = PBXGroup;
 			children = (
-				0197604B1A3A92F500E8C005 /* lib */,
-				0197604C1A3A92FE00E8C005 /* WaterFlowView */,
-				01975FF11A3A8F9800E8C005 /* AppDelegate.h */,
-				01975FF21A3A8F9800E8C005 /* AppDelegate.m */,
-				019760891A3AF44100E8C005 /* Storyboard.storyboard */,
+				0150A78E1A3D858B00870FFF /* Classes */,
 				01975FFA1A3A8F9800E8C005 /* Images.xcassets */,
-				019760131A3A8FDE00E8C005 /* MainViewController.h */,
-				019760141A3A8FDE00E8C005 /* MainViewController.m */,
-				019760161A3A907400E8C005 /* ClothDataModel.h */,
-				019760171A3A907400E8C005 /* ClothDataModel.m */,
-				01B1182B1A3C5BF4000F9A2B /* ClothDetailDataModel.h */,
-				01B1182C1A3C5BF4000F9A2B /* ClothDetailDataModel.m */,
-				010D7A101A3B3E8F00FD64F7 /* SecondViewController.h */,
-				010D7A111A3B3E8F00FD64F7 /* SecondViewController.m */,
-				010D7A141A3B459100FD64F7 /* LoadingView.h */,
-				010D7A151A3B459100FD64F7 /* LoadingView.m */,
-				01B118261A3C3E92000F9A2B /* ProductViewController.h */,
-				01B118271A3C3E92000F9A2B /* ProductViewController.m */,
-				01B1182F1A3C7AA0000F9A2B /* MyCartTableViewController.h */,
-				01B118301A3C7AA0000F9A2B /* MyCartTableViewController.m */,
-				01B118321A3C806D000F9A2B /* MyCartTableViewCell.h */,
-				01B118331A3C806D000F9A2B /* MyCartTableViewCell.m */,
 				01975FED1A3A8F9800E8C005 /* Supporting Files */,
 			);
 			path = "瀑布流 最终演练";
@@ -260,6 +294,7 @@
 		0197604B1A3A92F500E8C005 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				0197604C1A3A92FE00E8C005 /* WaterFlowView */,
 				019760191A3A913A00E8C005 /* SDWebImage */,
 			);
 			name = lib;
@@ -395,7 +430,6 @@
 				019760471A3A913A00E8C005 /* UIImage+WebP.m in Sources */,
 				019760491A3A913A00E8C005 /* UIImageView+WebCache.m in Sources */,
 				01B1182D1A3C5BF4000F9A2B /* ClothDetailDataModel.m in Sources */,
-				010D7A161A3B459100FD64F7 /* LoadingView.m in Sources */,
 				010D7A121A3B3E8F00FD64F7 /* SecondViewController.m in Sources */,
 				019760401A3A913A00E8C005 /* SDWebImageDownloader.m in Sources */,
 				0197604A1A3A913A00E8C005 /* UIView+WebCacheOperation.m in Sources */,

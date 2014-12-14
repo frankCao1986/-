@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "ClothDataModel.h"
 #import "UIImageView+WebCache.h"
-#import "LoadingView.h"
 #import "ProductViewController.h"
 #import "ClothDetailDataModel.h"
 #import "MyCartTableViewController.h"
@@ -17,7 +16,6 @@
 #import "UIImage+WebP.h"
 @interface MainViewController ()
 @property (nonatomic,strong) NSMutableArray *dataList;
-@property (nonatomic,weak) LoadingView *loadingView;
 @property (nonatomic,weak) UIRefreshControl *refreshControl;
 @property (nonatomic,strong)NSArray *urlList;
 @property (nonatomic,strong) NSMutableArray *dataDetailList;
