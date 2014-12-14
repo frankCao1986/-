@@ -244,7 +244,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="bwv-wx-D9t"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -256,9 +256,17 @@
                                         <constraint firstItem="SMd-qt-WyR" firstAttribute="leading" secondItem="3tU-XO-HqZ" secondAttribute="trailing" constant="19" id="Xd1-Ys-de3"/>
                                         <constraint firstItem="3tU-XO-HqZ" firstAttribute="top" secondItem="w5d-l8-Ini" secondAttribute="topMargin" constant="-7" id="axD-8u-nbh"/>
                                         <constraint firstAttribute="centerX" secondItem="rEb-Vq-arX" secondAttribute="centerX" constant="107" id="bnB-zc-xPF"/>
+                                        <constraint firstItem="rEb-Vq-arX" firstAttribute="leading" secondItem="w5d-l8-Ini" secondAttribute="leadingMargin" constant="10" id="buk-j8-zp5"/>
                                         <constraint firstItem="SMd-qt-WyR" firstAttribute="top" secondItem="w5d-l8-Ini" secondAttribute="topMargin" constant="3" id="pAS-il-HDU"/>
                                         <constraint firstItem="3tU-XO-HqZ" firstAttribute="leading" secondItem="rEb-Vq-arX" secondAttribute="trailing" constant="8" id="u1N-2w-8Ga"/>
+                                        <constraint firstItem="rEb-Vq-arX" firstAttribute="top" secondItem="w5d-l8-Ini" secondAttribute="topMargin" constant="-2" id="x9t-3V-7Pu"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="7DZ-JL-YWz"/>
+                                            <exclude reference="bnB-zc-xPF"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="itemImageView" destination="rEb-Vq-arX" id="cyJ-0u-YKP"/>

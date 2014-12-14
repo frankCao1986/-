@@ -114,7 +114,7 @@
         else{
             if (![self isInScreenWithFrame:cell.frame]) {
                 [cell removeFromSuperview];
-                [self. reuseCellSet addObject:cell];
+                [self.reuseCellSet addObject:cell];
                 [self.cellsOnScreenDictM removeObjectForKey:indexPath];
             }
         }
