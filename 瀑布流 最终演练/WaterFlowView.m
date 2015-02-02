@@ -119,7 +119,7 @@
             }
         }
     }
-
+    NSLog(@"Sub View --- %d",self.subviews.count);
 }
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier{
     // 从缓存池中实例化一个可以重用单元格
